@@ -1,0 +1,49 @@
+{
+  "name": "jspm-app",
+  "private": "true",
+  "devDependencies": {
+    "jspm": "^0.17.0-beta.11"
+  },
+  "jspm": {
+    "name": "jspm-app",
+    "dependencies": {
+      "react": "npm:react@^0.14.7",
+      "react-dom": "npm:react-dom@^0.14.7"
+    },
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.8"
+    },
+    "peerDependencies": {
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:fbjs@0.6.1": {
+        "dependencies": {}
+      },
+      "npm:react@0.14.7": {
+        "dependencies": {
+          "fbjs": "^0.6.1"
+        },
+        "format": "cjs",
+        "meta": {
+          "*": {
+            "globals": {
+              "process": "process"
+            }
+          }
+        },
+        "map": {
+          "fbjs/lib/ExecutionEnvironment.js": {
+            "production": "@empty"
+          },
+          "./lib/ReactDefaultPerf.js": {
+            "production": "@empty"
+          },
+          "./lib/ReactTestUtils.js": {
+            "production": "@empty"
+          }
+        }
+      }
+    }
+  }
+}
