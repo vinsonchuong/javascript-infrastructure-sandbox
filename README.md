@@ -21,5 +21,12 @@ project
     index.js
 
 ```
+
+The boilerplate files `jspm.browser.js` and `jspm.config.js` can be hidden
+inside of the `jspm_packages` directory and automatically re-generated after
+every run of `jspm install`. The
+[jspm-node](https://github.com/vinsonchuong/jspm-node) package demonstrates
+this hiding of boilerplate files.
+
 After serving the `project` directory with `python -m http.server`, it takes
 2-4 seconds to load and render the application.
