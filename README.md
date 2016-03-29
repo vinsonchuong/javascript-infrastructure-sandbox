@@ -4,7 +4,7 @@ tooling.
 
 ## Serving a Small React Application
 First, I'll be taking a look at the various options for compiling and serving
-a new React application.
+a new React application for development.
 
 ### JSPM
 Following the
@@ -33,3 +33,5 @@ After serving the `project` directory with `python -m http.server`, it takes
 
 With hot reloading, changed files are pushed to the browser and recompiled
 instantaneously.
+
+### webpack
