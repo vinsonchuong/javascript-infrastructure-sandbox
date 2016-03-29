@@ -30,3 +30,6 @@ this hiding of boilerplate files.
 
 After serving the `project` directory with `python -m http.server`, it takes
 2-4 seconds to load and render the application.
+
+With hot reloading, changed files are pushed to the browser and recompiled
+instantaneously.
