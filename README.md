@@ -22,6 +22,9 @@ project
 
 ```
 
+External dependencies are installed in the `node_modules` and `jspm_packages`.
+These directories are usually excluded from version control.
+
 The boilerplate files `jspm.browser.js` and `jspm.config.js` can be hidden
 inside of the `jspm_packages` directory and automatically re-generated after
 every run of `jspm install`. The
@@ -35,3 +38,26 @@ With hot reloading, changed files are pushed to the browser and recompiled
 instantaneously.
 
 ### webpack
+Following the `babel-loader` [README](https://github.com/babel/babel-loader),
+Webpack [Usage](http://webpack.github.io/docs/usage.html) documentation results
+in the following project structure:
+
+```text
+project
+  index.html
+  package.json
+  src
+    component.js
+    index.js
+  webpack.config.js
+
+```
+
+External dependencies are installed in the `node_modules`. This directory is
+usually excluded from version control. The contents of the `src` directory are
+compiled into a `dist.js` file, which should be excluded from version control.
+
+Because the application is pre-compiled into `dist.js`, load time consists only
+of execution time, which is very small. `webpack` watches the file system for
+changes and recompiles only the necessary files--incremental rebuilding, which
+is very fast.
