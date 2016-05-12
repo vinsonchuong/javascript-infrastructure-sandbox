@@ -37,7 +37,7 @@ After serving the `project` directory with `python -m http.server`, it takes
 With hot reloading, changed files are pushed to the browser and recompiled
 instantaneously.
 
-### webpack
+### Webpack
 Following the `babel-loader` [README](https://github.com/babel/babel-loader),
 Webpack [Usage](http://webpack.github.io/docs/usage.html) documentation results
 in the following project structure:
@@ -61,3 +61,10 @@ Because the application is pre-compiled into `dist.js`, load time consists only
 of execution time, which is very small. `webpack` watches the file system for
 changes and recompiles only the necessary files--incremental rebuilding, which
 is very fast.
+
+### Broccoli
+[jayphelps/broccoli-babel-boilerplate](https://github.com/jayphelps/broccoli-babel-boilerplate)
+shows an example of using Broccoli with ES2015 modules. Broccoli requires the
+use of external plugins both for ES2015 support and for the importing of
+modules. A fully configured Broccoli project is similar in structure to a fully
+configured Webpack project.
