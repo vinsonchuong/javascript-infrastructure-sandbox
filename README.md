@@ -50,7 +50,6 @@ project
     component.js
     index.js
   webpack.config.js
-
 ```
 
 External dependencies are installed in the `node_modules`. This directory is
@@ -74,3 +73,25 @@ A Browserify project has the same structure as a Webpack project as well. See
 [babel/babelify](https://github.com/babel/babelify) for examples. However,
 Browserify does not provide a means for recompiling on file change. So,
 additional configuration is required.
+
+### Brunch
+Following [The Brunch.io Guide](https://github.com/brunch/brunch-guide) and the
+[babel-brunch README](https://github.com/babel/babel-brunch) yields the
+following project structure:
+
+```text
+project
+  app
+    assets
+      index.html
+    component.js
+    index.js
+  brunch-config.js
+  package.json
+```
+
+The contents of the `app` directory are compiled and copied into the `public`
+directory, which should be excluded from version control.
+
+The application is served via `brunch watch --server`, which performs
+incremental rebuilding and provides a static file server.
