@@ -68,3 +68,9 @@ shows an example of using Broccoli with ES2015 modules. Broccoli requires the
 use of external plugins both for ES2015 support and for the importing of
 modules. A fully configured Broccoli project is similar in structure to a fully
 configured Webpack project.
+
+### Browserify
+A Browserify project has the same structure as a Webpack project as well. See
+[babel/babelify](https://github.com/babel/babelify) for examples. However,
+Browserify does not provide a means for recompiling on file change. So,
+additional configuration is required.
