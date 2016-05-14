@@ -95,3 +95,8 @@ directory, which should be excluded from version control.
 
 The application is served via `brunch watch --server`, which performs
 incremental rebuilding and provides a static file server.
+
+### Duo
+Duo provides a zero-configuration CLI for compiling JS and CSS. It also
+automatically installs external dependencies. Unfortunately, it currently
+does not support ES2015 via Babel 6.
