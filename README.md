@@ -6,7 +6,7 @@ tooling.
 First, I'll be taking a look at the various options for compiling and serving
 a new React application for development.
 
-### JSPM
+### Using JSPM
 Following the
 [getting started guide](http://jspm.io/0.17-beta-guide/creating-a-project.html)
 results in the following project structure:
@@ -37,7 +37,7 @@ After serving the `project` directory with `python -m http.server`, it takes
 With hot reloading, changed files are pushed to the browser and recompiled
 instantaneously.
 
-### Webpack
+### Using Webpack
 Following the `babel-loader` [README](https://github.com/babel/babel-loader),
 Webpack [Usage](http://webpack.github.io/docs/usage.html) documentation results
 in the following project structure:
@@ -61,20 +61,20 @@ of execution time, which is very small. `webpack` watches the file system for
 changes and recompiles only the necessary files--incremental rebuilding, which
 is very fast.
 
-### Broccoli
+### Using Broccoli
 [jayphelps/broccoli-babel-boilerplate](https://github.com/jayphelps/broccoli-babel-boilerplate)
 shows an example of using Broccoli with ES2015 modules. Broccoli requires the
 use of external plugins both for ES2015 support and for the importing of
 modules. A fully configured Broccoli project is similar in structure to a fully
 configured Webpack project.
 
-### Browserify
+### Using Browserify
 A Browserify project has the same structure as a Webpack project as well. See
 [babel/babelify](https://github.com/babel/babelify) for examples. However,
 Browserify does not provide a means for recompiling on file change. So,
 additional configuration is required.
 
-### Brunch
+### Using Brunch
 Following [The Brunch.io Guide](https://github.com/brunch/brunch-guide) and the
 [babel-brunch README](https://github.com/babel/babel-brunch) yields the
 following project structure:
@@ -96,7 +96,20 @@ directory, which should be excluded from version control.
 The application is served via `brunch watch --server`, which performs
 incremental rebuilding and provides a static file server.
 
-### Duo
+### Using Duo
 Duo provides a zero-configuration CLI for compiling JS and CSS. It also
 automatically installs external dependencies. Unfortunately, it currently
 does not support ES2015 via Babel 6.
+
+### Findings
+Most build tools concatenate the compiled ES2015 modules into a single file for
+easy consumption by the browser. Each module is wrapped and only evaluated when
+imported as a dependency. Some build tools have the concept of an entry point,
+a module that is evaluated immediately when the build artifact is evaluated.
+In contrast, Brunch, requires explicitly evaluating a module by name.
+
+On the other hand, JSPM handles compilation in the browser and does not
+concatenate modules into a single file.
+
+Both approaches have different performance characteristics that can be
+optimized with caching.
