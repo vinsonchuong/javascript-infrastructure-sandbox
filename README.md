@@ -113,3 +113,10 @@ concatenate modules into a single file.
 
 Both approaches have different performance characteristics that can be
 optimized with caching.
+
+### Ideal Infrastructure
+The WHATWG is developing the
+[JavaScript Loader Standard](https://github.com/whatwg/loader), which defines
+how browsers should handle the `import` and `export` keywords. The
+[ES6 Module Loader Polyfill](https://github.com/ModuleLoader/es6-module-loader)
+allows that behavior to be used today.
