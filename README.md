@@ -120,3 +120,9 @@ The WHATWG is developing the
 how browsers should handle the `import` and `export` keywords. The
 [ES6 Module Loader Polyfill](https://github.com/ModuleLoader/es6-module-loader)
 allows that behavior to be used today.
+
+Ideally, a codebase would contain only application code and would be free of
+code and asset compilation configration. This means no `webpack.config.js`, no
+`brunch-config.coffee`, no `jspm.config.js`, and no `jspm.browser.js`.
+Compilation infrastructure should ideally make browsers and Node.js behave as
+specified in the JavaScript Loader Standard.
