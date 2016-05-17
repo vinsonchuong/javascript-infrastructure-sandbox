@@ -125,4 +125,9 @@ Ideally, a codebase would contain only application code and would be free of
 code and asset compilation configration. This means no `webpack.config.js`, no
 `brunch-config.coffee`, no `jspm.config.js`, and no `jspm.browser.js`.
 Compilation infrastructure should ideally make browsers and Node.js behave as
-specified in the JavaScript Loader Standard.
+specified in the JavaScript Loader Standard without requiring additional
+configuration.
+
+Because a HTTP server is required to at least serve the code files, the
+compilation infrastructure can provide an HTTP server or middleware that adds
+ES6 compilation functionality.
