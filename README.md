@@ -130,4 +130,14 @@ configuration.
 
 Because a HTTP server is required to at least serve the code files, the
 compilation infrastructure can provide an HTTP server or middleware that adds
-ES6 compilation functionality.
+ES2015 compilation functionality. The infrastructure would provide an interface
+for a browser to request ES2015 modules, indexed by file path.
+
+Currently, Babel compiles the `import` keyword into a call to a global
+`require` function. The infrastructure might provide a `require` function that
+fetches the compiled version of the requested module from the server.
+
+In order to avoid the performance issues that JSPM faces, the server might
+provide the requested module and all of its dependencies. The browser might
+even inform the server of what modules it has already loaded so that the
+server is able to avoid sending unneeded modules.
