@@ -126,7 +126,10 @@ code and asset compilation configration. This means no `webpack.config.js`, no
 `brunch-config.coffee`, no `jspm.config.js`, and no `jspm.browser.js`.
 Compilation infrastructure should ideally make browsers and Node.js behave as
 specified in the JavaScript Loader Standard without requiring additional
-configuration.
+configuration. Developers should not need to be concerned with how to get
+browsers to support newly standardized features as the behavior is already
+well-defined. Developers should be free to devote their attention to the
+application domain.
 
 Because a HTTP server is required to at least serve the code files, the
 compilation infrastructure can provide an HTTP server or middleware that adds
