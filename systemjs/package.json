@@ -1,0 +1,15 @@
+{
+  "name": "systemjs-app",
+  "private": true,
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  },
+  "devDependencies": {
+    "express": "^4.14.0",
+    "express-systemjs-translate": "^3.2.0",
+    "systemjs": "^0.19.31",
+    "systemjs-builder": "^0.15.23",
+    "systemjs-plugin-babel": "0.0.12"
+  }
+}
