@@ -1,0 +1,14 @@
+{
+  "name": "serve-esnext-app",
+  "private": true,
+  "scripts": {
+    "start": "serve-esnext"
+  },
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  },
+  "devDependencies": {
+    "serve-esnext": "0.0.2"
+  }
+}
